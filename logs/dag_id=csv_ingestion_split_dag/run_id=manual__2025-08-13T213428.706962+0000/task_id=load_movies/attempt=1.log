@@ -1,0 +1,12 @@
+{"timestamp":"2025-08-13T21:34:35.611503","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-08-13T21:34:35.612896","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/etl_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-08-13T21:34:35.831662Z","level":"info","event":"Task instance is in running state","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-13T21:34:35.833234Z","level":"info","event":" Previous state of the Task instance: queued","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-13T21:34:35.834298Z","level":"info","event":"Current task name:load_movies","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-13T21:34:35.835806Z","level":"info","event":"Dag name:csv_ingestion_split_dag","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-13T21:34:35.987005","level":"info","event":"Secrets backends loaded for worker","count":1,"backend_classes":["EnvironmentVariablesBackend"],"logger":"supervisor"}
+{"timestamp":"2025-08-13T21:34:36.017313","level":"info","event":"Connection Retrieved 'my_postgres'","logger":"airflow.hooks.base"}
+{"timestamp":"2025-08-13T21:34:46.166753","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator"}
+{"timestamp":"2025-08-13T21:34:46.264433Z","level":"info","event":"Task instance in success state","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-13T21:34:46.265729Z","level":"info","event":" Previous state of the Task instance: running","chan":"stdout","logger":"task"}
+{"timestamp":"2025-08-13T21:34:46.266806Z","level":"info","event":"Task operator:<Task(PythonOperator): load_movies>","chan":"stdout","logger":"task"}
