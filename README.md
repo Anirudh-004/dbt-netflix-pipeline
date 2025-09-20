@@ -43,36 +43,35 @@ The pipeline demonstrates **real-world data engineering practices** such as:
 - Implementing **tests & macros** for data quality  
 - **Slowly Changing Dimension (SCD) Type 2** handling with DBT snapshots  
 
-## Flowchart and architecture diagram
-flowchart LR
-    subgraph Source
-        S3[AWS S3\n(MovieLens CSVs)]
-    end
+## 🏗️ Architecture  
 
-    subgraph Orchestration
-        Airflow[Apache Airflow\n(Docker Compose)]
-    end
-
-    subgraph Storage
-        Postgres[(PostgreSQL\nDocker Container)]
-        pgAdmin[pgAdmin\n(DB GUI)]
-    end
-
-    subgraph Transformation
-        DBT[DBT Project\n(staging → dim → fct → mart)]
-    end
-
-    subgraph Analytics
-        BI[Analytics Layer\n(Metabase / Superset / Looker)]
-    end
-
-    S3 -->|Ingest DAGs| Airflow
-    Airflow -->|Load| Postgres
-    Airflow -->|Trigger| DBT
-    Postgres -->|Raw tables| DBT
-    DBT -->|Transformed tables| Postgres
-    Postgres -->|Consume marts| BI
-    Postgres --> pgAdmin
+```text
+           +-------------+
+           |  MovieLens  |
+           |   Dataset   |
+           +------+------+   
+                  | (CSV upload)
+                  v
+             +----+----+
+             |   AWS   |
+             |   S3    |
+             +----+----+
+                  |
+        Ingestion with Airflow
+                  |
+                  v
+        +---------+---------+
+        |   PostgreSQL DB   |
+        |   (Dockerized)    |
+        +---------+---------+
+                  |
+        Transformation with DBT
+                  |
+       +----------+----------+
+       |  Analytics Schemas  |
+       |   (dev: staging,    |
+       |   dim, fct, mart)   |
+       +----------+----------+
 
 ## 📂 Project Structure
 
