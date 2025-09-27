@@ -1,9 +1,0 @@
-{"timestamp":"2025-08-13T21:34:35.615317","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
-{"timestamp":"2025-08-13T21:34:35.617105","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/etl_dag.py","logger":"airflow.models.dagbag.DagBag"}
-{"timestamp":"2025-08-13T21:34:35.858220Z","level":"info","event":"Task instance is in running state","chan":"stdout","logger":"task"}
-{"timestamp":"2025-08-13T21:34:35.860041Z","level":"info","event":" Previous state of the Task instance: queued","chan":"stdout","logger":"task"}
-{"timestamp":"2025-08-13T21:34:35.862716Z","level":"info","event":"Current task name:load_genome_scores","chan":"stdout","logger":"task"}
-{"timestamp":"2025-08-13T21:34:35.863487Z","level":"info","event":"Dag name:csv_ingestion_split_dag","chan":"stdout","logger":"task"}
-{"timestamp":"2025-08-13T21:35:05.888477","level":"info","event":"Secrets backends loaded for worker","count":1,"backend_classes":["EnvironmentVariablesBackend"],"logger":"supervisor"}
-{"timestamp":"2025-08-13T21:35:05.923935","level":"info","event":"Connection Retrieved 'my_postgres'","logger":"airflow.hooks.base"}
-{"timestamp":"2025-08-13T21:35:32.794332Z","level":"critical","event":"Process terminated by signal. For more information, see https://airflow.apache.org/docs/apache-airflow/stable/troubleshooting.html#TaskRunner-killed","signal":-9,"signal_name":"SIGKILL","logger":"task"}
