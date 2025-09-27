@@ -1,0 +1,6 @@
+version: 2
+
+models:
+  - name: fct_genome_scores
+    tests:
+      - relevence_score_test
