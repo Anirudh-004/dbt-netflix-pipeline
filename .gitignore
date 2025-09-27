@@ -1,3 +1,13 @@
 .env
 .idea
 data
+logs
+# dbt log files
+dbt/logs/
+*.log
+
+# dbt compiled models and targets
+dbt/target/
+dbt/run/
+dbt/compiled/
+
